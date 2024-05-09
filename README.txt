@@ -1,0 +1,6 @@
+This was my first project using C++.
+This project really helped me get familiarized with the ASCII table, switch statements, and calling functions. 
+I understand that this is a very simple and elementary program but it was a great way for me to dip my toes in the water. 
+In this program you can encrypt and decrypt messages. 
+There are multiple encryption/ decryption methods. 
+You are prompted with a series of instructions to properly encrypt/ decrypt your message.
