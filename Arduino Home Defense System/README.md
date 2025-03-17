@@ -8,7 +8,8 @@ I had the idea of creating a tripwire system that, once triggered, would spray a
 ## **Prototype Development**
 I started by creating a simple cardboard prototype to demonstrate how it would work. My idea was to set up a laser tripwire across the door. Once triggered, a servo would push down a swinging arm, activating another servo that would spray the Axe.
 
-[📹 Prototype Test Video](videos/prototype.mp4)
+[![Prototype Test Video](https://img.youtube.com/vi/bq_6fXvCKoM/0.jpg)](https://www.youtube.com/watch?v=bq_6fXvCKoM)
+
 
 
 After completing this basic prototype, I researched similar projects online to help me decide what parts I’d need to bring my idea to life. I settled on the following components:
