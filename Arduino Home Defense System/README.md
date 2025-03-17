@@ -48,23 +48,3 @@ Unfortunately, by this point, the Axe can was nearly empty, so barely any spray 
 ## **Arduino Code**
 Here’s the simple Arduino script I wrote for the project:
 
-```cpp
-#include <Servo.h>
-
-Servo armServo;
-Servo sprayServo;
-
-void setup() {
-    armServo.attach(9);
-    sprayServo.attach(10);
-}
-
-void loop() {
-    // Simulated trigger mechanism
-    armServo.write(90); 
-    delay(500);
-    sprayServo.write(90); 
-    delay(1000);
-    armServo.write(0);
-    sprayServo.write(0);
-}
