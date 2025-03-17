@@ -22,8 +22,9 @@ Once everything arrived, I felt like a kid on Christmas and got right to work. I
 ## **Setup & Testing**
 Once I confirmed that everything was functional, I began installing the system in my room. To keep the bar in place, I used some tape and built a small cardboard holder.
 
-## **Cardboard Cutout:**
-![Cardboard Cutout](images/cardboard.jpeg)
+#### **Cardboard Cutout:**
+<img src="images/cardboard.jpeg" width="300">
+
 
 
 
@@ -37,7 +38,13 @@ Once I confirmed that everything was functional, I began installing the system i
 
 The next step was integrating the Axe Body Spray. This proved to be more challenging than expected. My tiny servos weren’t strong enough to press down on the can directly, so I initially thought of using a spring-loaded mechanism. I decided to use mousetraps because of their strong springs.
 
+#### **Mousetrap Idea:**
+<img src="images/mousetraps.jpeg" width="300">
+
 While this method worked, it required three mousetraps, and it just wasn’t the solution I was looking for. Then, I remembered what my good friend Isaac Newton stood for: *Physics.* By extending the trigger length, I could reduce the amount of force needed to activate the spray.
+
+#### **Revised Axe Method:**
+<img src="images/goodCan.jpeg" width="300">
 
 ## **Final Design & Adjustments**
 This was a much better solution. However, once I started testing everything together, I ran into a new issue—because the Axe can added so much weight, the push-to-deploy mechanism was no longer effective.
@@ -54,4 +61,20 @@ Unfortunately, by this point, the Axe can was nearly empty, so barely any spray 
 
 ## **Arduino Code**
 Here’s the simple Arduino script I wrote for the project:
+```cpp
+// Example Arduino code
+#include <Servo.h>
+
+Servo myServo;
+
+void setup() {
+    myServo.attach(9);
+}
+
+void loop() {
+    myServo.write(90);
+    delay(1000);
+    myServo.write(0);
+    delay(1000);
+}
 
