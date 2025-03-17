@@ -22,9 +22,14 @@ Once everything arrived, I felt like a kid on Christmas and got right to work. I
 ## **Setup & Testing**
 Once I confirmed that everything was functional, I began installing the system in my room. To keep the bar in place, I used some tape and built a small cardboard holder.
 
+<h3>Cardboard Cutout:</h3>
+<img src="Arduino-Home-Defense-System/images/cardboard.jpeg" width="500">
+
+
+
 **Test Deployment Video:**
 <video width="600" controls>
-  <source src="videos/workingArm.mp4" type="video/mp4">
+  <source src="Arduino-Home-Defense-System/videos/workingArm.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
@@ -39,7 +44,7 @@ To fix this, I switched from a **push-to-deploy** to a **pull-to-deploy** mechan
 
 **Final Test Video:**
 <video width="600" controls>
-  <source src="videos/Success.mp4" type="video/mp4">
+  <source src="Arduino-Home-Defense-System/videos/Success.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
