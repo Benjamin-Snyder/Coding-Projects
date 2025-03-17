@@ -119,6 +119,9 @@ void loop() {
     digitalWrite(LED, LOW);
   }
 }
+```
 
+## **Conclusion**
 
+This project was a fun and chaotic learning experience. If I were to do it again, I’d use stronger servos and try to find a 3D printer I could use. But for now, it works… kind of.
 
