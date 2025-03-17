@@ -63,18 +63,63 @@ Unfortunately, by this point, the Axe can was nearly empty, so barely any spray 
 Here’s the simple Arduino script I wrote for the project:
 ```cpp
 // Example Arduino code
+#include <Arduino.h>
 #include <Servo.h>
+using namespace std;
 
-Servo myServo;
+
+
+int LED = 13;
+int LaserSensor = 8;
+int SensorReading = HIGH;  // HIGH MEANS NO OBSTACLE
+int Laser = 7; 
+Servo armServo, triggerServo;
+
+void pushArm(){
+  armServo.write(200);
+  delay(500);
+  armServo.write(0);
+  
+}
+
+void trigServo(){
+  triggerServo.write(180);
+  delay(15000);
+  triggerServo.write(0);
+
+}
+
 
 void setup() {
-    myServo.attach(9);
+  pinMode(LED, OUTPUT);
+  pinMode(Laser, OUTPUT);
+  pinMode(LaserSensor, INPUT);
+  armServo.attach(10);  // connect servo to pin
+  armServo.write(0); // set servo to start pos
+  triggerServo.attach(11);
+  triggerServo.write(0);
 }
 
+
+
 void loop() {
-    myServo.write(90);
-    delay(1000);
-    myServo.write(0);
-    delay(1000);
+  digitalWrite(Laser, HIGH); // turn laser on
+  delay(200);
+  SensorReading = digitalRead(LaserSensor);
+  
+  if (SensorReading == LOW) // if laser blocked
+  {
+    digitalWrite(LED, HIGH); // turn light on
+    pushArm(); // push arm
+    delay(1500);
+    trigServo(); // trigger the spray
+    
+  }
+  else
+  {
+    digitalWrite(LED, LOW);
+  }
 }
+
+
 
